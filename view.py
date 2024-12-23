@@ -11,6 +11,8 @@ class MyView(QMainWindow):
         self.controller = controller
 
         self.setGeometry(100, 200, 800, 1000)
+        
+        
 
         main_frame = QFrame()
         main_frame.setStyleSheet(
@@ -23,12 +25,13 @@ class MyView(QMainWindow):
         label_frame.setStyleSheet("""
                                   background-color: #1A3654; 
                                   color: white;
-                                  background-image: url('./static/Group 23.png');
+                                  background-image: url('./static/لنكيدو Pharmacy.png');
                                   background-repeat: no-repeat;
                                   background-position: center;
                                   """)
         label_frame.setFixedHeight(100)
         label_frame.setGeometry(0, 0, 800, 1000)
+
         
         
 
@@ -44,7 +47,7 @@ class MyView(QMainWindow):
         frame_layout = QGridLayout(frame)
         layout.addWidget(frame, 1, 0)
 
-        icon = QIcon('./static/image.png')
+        icon = QIcon('./static/Untitled (4).png')
 
         
         # Button 1
