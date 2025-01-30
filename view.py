@@ -387,10 +387,7 @@ class Lists(QMainWindow):
         button1.setIconSize(QSize(229, 62))
        
         save_frame_layout.addWidget(button1,1,0)
-<<<<<<< HEAD
-=======
-        
->>>>>>> 6adb0d273f6e3d41f308c2fcbc6b64f1907bba77
+
 
 
         
@@ -1183,21 +1180,18 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_material, 0, 1)
 
-<<<<<<< HEAD
         self.mat_name = QLineEdit()
         self.mat_name.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
         save_frame_layout.addWidget(self.mat_name, 0, 0)
-=======
         material_input = QLineEdit()
         material_input.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
         save_frame_layout.addWidget(material_input, 0, 0)
->>>>>>> 6adb0d273f6e3d41f308c2fcbc6b64f1907bba77
 
         
         
@@ -1237,21 +1231,19 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_tayp, 2, 1)
 
-<<<<<<< HEAD
         self.mat_type = QLineEdit()
         self.mat_type.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
         save_frame_layout.addWidget(self.mat_type, 2, 0)
-=======
+        
         tayp_input = QLineEdit()
         tayp_input.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
         save_frame_layout.addWidget(tayp_input, 2, 0)
->>>>>>> 6adb0d273f6e3d41f308c2fcbc6b64f1907bba77
 
         ######
         
