@@ -21,7 +21,6 @@ class MyView(QMainWindow):
         layout = QGridLayout(main_frame)
 
         label_frame = QFrame()
-        label_frame_layout = QVBoxLayout(label_frame)
         label_frame.setStyleSheet("""
                                   background-color: #1A3654; 
                                   color: white;
@@ -388,7 +387,6 @@ class Lists(QMainWindow):
         button1.setIconSize(QSize(229, 62))
        
         save_frame_layout.addWidget(button1,1,0)
-        print("eeee")
 
 
         
@@ -1181,12 +1179,12 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_history, 0, 1)
 
-        history_input = QLineEdit()
-        history_input.setStyleSheet("""
+        self.mat_name = QLineEdit()
+        self.mat_name.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(history_input, 0, 0)
+        save_frame_layout.addWidget(self.mat_name, 0, 0)
 
         
         
@@ -1203,12 +1201,12 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_company, 1, 1)
 
-        company_input = QLineEdit()
-        company_input.setStyleSheet("""
+        self.company = QLineEdit()
+        self.company.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(company_input, 1, 0)
+        save_frame_layout.addWidget(self.company, 1, 0)
 
 
 
@@ -1226,12 +1224,12 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_history, 2, 1)
 
-        history_input = QLineEdit()
-        history_input.setStyleSheet("""
+        self.mat_type = QLineEdit()
+        self.mat_type.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(history_input, 2, 0)
+        save_frame_layout.addWidget(self.mat_type, 2, 0)
 
         ######
         
@@ -1249,12 +1247,12 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_number, 3, 1)
 
-        number_input = QLineEdit()
-        number_input.setStyleSheet("""
+        self.count = QLineEdit()
+        self.count.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(number_input, 3, 0)
+        save_frame_layout.addWidget(self.count, 3, 0)
 
 
 
@@ -1272,12 +1270,12 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_End_date, 4, 1)
 
-        End_date_input = QLineEdit()
-        End_date_input.setStyleSheet("""
+        self.expiry = QLineEdit()
+        self.expiry.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(End_date_input, 4, 0)
+        save_frame_layout.addWidget(self.expiry, 4, 0)
 
         
         label_age = QLabel("العمر المناسب ")
@@ -1291,16 +1289,17 @@ class  Materials(QMainWindow):
         ''')
         save_frame_layout.addWidget(label_age, 5, 1)
 
-        age_input = QLineEdit()
-        age_input.setStyleSheet("""
+        self.age = QLineEdit()
+        self.age.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(age_input, 5, 0)
+        save_frame_layout.addWidget(self.age, 5, 0)
 
 
          #حفظ وتعديل 
         button1 = QPushButton()
+        button1.clicked.connect(self.send_data_to_controller)
         button1.setStyleSheet("""
                    QPushButton {
                     border-radius: 4px;
@@ -1369,6 +1368,16 @@ class  Materials(QMainWindow):
         button2.setIconSize(QSize(90, 36))
         
         save_frame_layout.addWidget(button2,7,0,1,2)
+
+
+    def send_data_to_controller(self):
+        mat_n = self.mat_name.text()
+        company_n = self.company.text()
+        mat_t = self.mat_type.text()
+        mat_c = self.count.text()
+        mat_ex = self.expiry.text()
+        mat_age = self.age.text()
+        self.controller.add_mat_to_model(mat_n, company_n, mat_t, mat_c, mat_ex, mat_age)
 
 
            

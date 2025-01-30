@@ -1,9 +1,11 @@
 from view import *
+from model import *
 
 
 class Controller:
     def __init__(self):
         self.view = MyView(self)
+        self.model = Model
 
     def show_list(self):
         self.show_list_add = Lists(self)
@@ -43,3 +45,5 @@ class Controller:
         self.show_Data_analysis_add = Data_analysis(self)
         self.show_Data_analysis_add.show()
 
+    def add_mat_to_model(self,name_mat, name_com, type_mat, count, expiry, Suitable_age):
+        self.model.add_mat(name_mat, name_com, type_mat, count, expiry, Suitable_age)
