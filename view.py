@@ -296,8 +296,8 @@ class Lists(QMainWindow):
 
         frame_whit2 = QFrame()
         frame_whit2.setStyleSheet("""
-    border-radius: 4px;
-    background-color: #fff;
+         border-radius: 4px;
+         background-color: #fff;
      """)
         frame_whit2.setFixedHeight(50)
         frame_whit2.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed) 
@@ -305,8 +305,8 @@ class Lists(QMainWindow):
 
         frame_whit3 = QFrame()
         frame_whit3.setStyleSheet("""
-    border-radius: 4px;
-    background-color: #fff;
+         border-radius: 4px;
+         background-color: #fff;
        """)
         frame_whit3.setFixedHeight(50)
         frame_whit3.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)  
@@ -315,8 +315,8 @@ class Lists(QMainWindow):
 
         frame_whit4 = QFrame()
         frame_whit4.setStyleSheet("""
-    border-radius: 4px;
-    background-color: #fff;
+        border-radius: 4px;
+        background-color: #fff;
        """)
         frame_whit4.setFixedHeight(50)
         frame_whit4.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)  
@@ -387,6 +387,10 @@ class Lists(QMainWindow):
         button1.setIconSize(QSize(229, 62))
        
         save_frame_layout.addWidget(button1,1,0)
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 6adb0d273f6e3d41f308c2fcbc6b64f1907bba77
 
 
         
@@ -420,7 +424,7 @@ class Lists(QMainWindow):
         button2.setIconSize(QSize(90, 36))
         
         save_frame_layout.addWidget(button2,2,0)
-        print("eeee")
+        
         
 
         
@@ -454,7 +458,7 @@ class Lists(QMainWindow):
         button3.setIconSize(QSize(90, 36))
         
         save_frame_layout.addWidget(button3,3,0)
-        print("eeee")
+       
 
 
 
@@ -883,8 +887,8 @@ class Deferred(QMainWindow):
         
         # البحث في فريم الجانبي لل (save frame layout)
 
-        label_history = QLabel("اسم العميل")
-        label_history.setStyleSheet('''
+        label_custemer = QLabel("اسم العميل")
+        label_custemer.setStyleSheet('''
             color: #FFF;
             font-family: Inter;
             font-size: 14px;
@@ -892,44 +896,21 @@ class Deferred(QMainWindow):
             font-weight: 700;
             line-height: normal;
         ''')
-        save_frame_layout.addWidget(label_history, 0, 1)
+        save_frame_layout.addWidget(label_custemer, 0, 1)
 
-        history_input = QLineEdit()
-        history_input.setStyleSheet("""
+        custemer_input = QLineEdit()
+        custemer_input.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(history_input, 0, 0)
+        save_frame_layout.addWidget(custemer_input, 0, 0)
 
 
 
         
         # البحث في فريم الجانبي لل (save frame layout)
 
-        label_history = QLabel("رقم الهاتف ")
-        label_history.setStyleSheet('''
-            color: #FFF;
-            font-family: Inter;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        ''')
-        save_frame_layout.addWidget(label_history, 1, 1)
-
-        history_input = QLineEdit()
-        history_input.setStyleSheet("""
-            border-radius: 4px;
-            background-color: #fff;
-        """)
-        save_frame_layout.addWidget(history_input, 1, 0)
-
-        ######
-        
-        
-        # البحث في فريم الجانبي لل (save frame layout)
-
-        label_number = QLabel("العنوان")
+        label_number = QLabel("رقم الهاتف ")
         label_number.setStyleSheet('''
             color: #FFF;
             font-family: Inter;
@@ -938,10 +919,33 @@ class Deferred(QMainWindow):
             font-weight: 700;
             line-height: normal;
         ''')
-        save_frame_layout.addWidget(label_number, 2, 1)
+        save_frame_layout.addWidget(label_number, 1, 1)
 
         number_input = QLineEdit()
         number_input.setStyleSheet("""
+            border-radius: 4px;
+            background-color: #fff;
+        """)
+        save_frame_layout.addWidget(number_input, 1, 0)
+
+        ######
+        
+        
+        # البحث في فريم الجانبي لل (save frame layout)
+
+        label_taitl = QLabel("العنوان")
+        label_taitl.setStyleSheet('''
+            color: #FFF;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        ''')
+        save_frame_layout.addWidget(label_taitl, 2, 1)
+
+        taital_input = QLineEdit()
+        taital_input.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
@@ -952,8 +956,8 @@ class Deferred(QMainWindow):
         
         # البحث في فريم الجانبي لل (save frame layout)
 
-        label_End_date = QLabel("السعر ")
-        label_End_date.setStyleSheet('''
+        label_pric = QLabel("السعر ")
+        label_pric.setStyleSheet('''
             color: #FFF;
             font-family: Inter;
             font-size: 14px;
@@ -961,14 +965,14 @@ class Deferred(QMainWindow):
             font-weight: 700;
             line-height: normal;
         ''')
-        save_frame_layout.addWidget(label_End_date, 3, 1)
+        save_frame_layout.addWidget(label_pric, 3, 1)
 
-        End_date_input = QLineEdit()
-        End_date_input.setStyleSheet("""
+        pric_input = QLineEdit()
+        pric_input.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(End_date_input, 3, 0)
+        save_frame_layout.addWidget(pric_input, 3, 0)
 
 
          #المجموع 
@@ -1168,8 +1172,8 @@ class  Materials(QMainWindow):
         
         # البحث في فريم الجانبي لل (save frame layout)
 
-        label_history = QLabel("اسم المادة")
-        label_history.setStyleSheet('''
+        label_material = QLabel("اسم المادة")
+        label_material.setStyleSheet('''
             color: #FFF;
             font-family: Inter;
             font-size: 14px;
@@ -1177,14 +1181,23 @@ class  Materials(QMainWindow):
             font-weight: 700;
             line-height: normal;
         ''')
-        save_frame_layout.addWidget(label_history, 0, 1)
+        save_frame_layout.addWidget(label_material, 0, 1)
 
+<<<<<<< HEAD
         self.mat_name = QLineEdit()
         self.mat_name.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
         save_frame_layout.addWidget(self.mat_name, 0, 0)
+=======
+        material_input = QLineEdit()
+        material_input.setStyleSheet("""
+            border-radius: 4px;
+            background-color: #fff;
+        """)
+        save_frame_layout.addWidget(material_input, 0, 0)
+>>>>>>> 6adb0d273f6e3d41f308c2fcbc6b64f1907bba77
 
         
         
@@ -1213,8 +1226,8 @@ class  Materials(QMainWindow):
         
         # البحث في فريم الجانبي لل (save frame layout)
 
-        label_history = QLabel("نوع المادة")
-        label_history.setStyleSheet('''
+        label_tayp = QLabel("نوع المادة")
+        label_tayp.setStyleSheet('''
             color: #FFF;
             font-family: Inter;
             font-size: 14px;
@@ -1222,14 +1235,23 @@ class  Materials(QMainWindow):
             font-weight: 700;
             line-height: normal;
         ''')
-        save_frame_layout.addWidget(label_history, 2, 1)
+        save_frame_layout.addWidget(label_tayp, 2, 1)
 
+<<<<<<< HEAD
         self.mat_type = QLineEdit()
         self.mat_type.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
         save_frame_layout.addWidget(self.mat_type, 2, 0)
+=======
+        tayp_input = QLineEdit()
+        tayp_input.setStyleSheet("""
+            border-radius: 4px;
+            background-color: #fff;
+        """)
+        save_frame_layout.addWidget(tayp_input, 2, 0)
+>>>>>>> 6adb0d273f6e3d41f308c2fcbc6b64f1907bba77
 
         ######
         
@@ -1470,8 +1492,8 @@ class Closet(QMainWindow):
         
         # البحث في فريم الجانبي لل (save frame layout)
 
-        label_history = QLabel("البحث")
-        label_history.setStyleSheet('''
+        label_research = QLabel("البحث")
+        label_research.setStyleSheet('''
             color: #FFF;
             font-family: Inter;
             font-size: 14px;
@@ -1479,22 +1501,22 @@ class Closet(QMainWindow):
             font-weight: 700;
             line-height: normal;
         ''')
-        save_frame_layout.addWidget(label_history, 0, 1)
+        save_frame_layout.addWidget(label_research, 0, 1)
 
-        history_input = QLineEdit()
-        history_input.setStyleSheet("""
+        research_input = QLineEdit()
+        research_input.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(history_input, 0, 0)
+        save_frame_layout.addWidget(research_input, 0, 0)
 
 
 
         
         # البحث في فريم الجانبي لل (save frame layout)
 
-        label_history = QLabel("النوع")
-        label_history.setStyleSheet('''
+        label_type = QLabel("النوع")
+        label_type.setStyleSheet('''
             color: #FFF;
             font-family: Inter;
             font-size: 14px;
@@ -1502,14 +1524,14 @@ class Closet(QMainWindow):
             font-weight: 700;
             line-height: normal;
         ''')
-        save_frame_layout.addWidget(label_history, 1, 1)
+        save_frame_layout.addWidget(label_type, 1, 1)
 
-        history_input = QLineEdit()
-        history_input.setStyleSheet("""
+        type_input = QLineEdit()
+        type_input.setStyleSheet("""
             border-radius: 4px;
             background-color: #fff;
         """)
-        save_frame_layout.addWidget(history_input, 1, 0)
+        save_frame_layout.addWidget(type_input, 1, 0)
 
 
         
