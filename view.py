@@ -6,7 +6,7 @@ from PySide6.QtCore import QDate, QSize
 from datetime import datetime
 
 
-
+#akram
 class MyView(QMainWindow):
     def __init__(self, controller=None):
         super().__init__()
